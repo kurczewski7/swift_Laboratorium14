@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		2C0197FF1E58E5380005DF41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0197FE1E58E5380005DF41 /* AppDelegate.swift */; };
-		2C0198011E58E5380005DF41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0198001E58E5380005DF41 /* ViewController.swift */; };
 		2C0198041E58E5380005DF41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0198021E58E5380005DF41 /* Main.storyboard */; };
 		2C0198061E58E5380005DF41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0198051E58E5380005DF41 /* Assets.xcassets */; };
 		2C0198091E58E5380005DF41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0198071E58E5380005DF41 /* LaunchScreen.storyboard */; };
+		2C0198111E58E8EC0005DF41 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0198101E58E8EC0005DF41 /* RestaurantTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C0197FB1E58E5380005DF41 /* Lab9_FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab9_FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0197FE1E58E5380005DF41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C0198001E58E5380005DF41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C0198031E58E5380005DF41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C0198051E58E5380005DF41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C0198081E58E5380005DF41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C01980A1E58E5380005DF41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0198101E58E8EC0005DF41 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				2C0197FE1E58E5380005DF41 /* AppDelegate.swift */,
-				2C0198001E58E5380005DF41 /* ViewController.swift */,
 				2C0198021E58E5380005DF41 /* Main.storyboard */,
 				2C0198051E58E5380005DF41 /* Assets.xcassets */,
 				2C0198071E58E5380005DF41 /* LaunchScreen.storyboard */,
 				2C01980A1E58E5380005DF41 /* Info.plist */,
+				2C0198101E58E8EC0005DF41 /* RestaurantTableViewController.swift */,
 			);
 			path = Lab9_FoodPin;
 			sourceTree = "<group>";
@@ -96,7 +96,7 @@
 				TargetAttributes = {
 					2C0197FA1E58E5380005DF41 = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C0198011E58E5380005DF41 /* ViewController.swift in Sources */,
+				2C0198111E58E8EC0005DF41 /* RestaurantTableViewController.swift in Sources */,
 				2C0197FF1E58E5380005DF41 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +258,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Lab9_FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.wroclaw.pwr.Lab9-FoodPin";
@@ -270,6 +271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Lab9_FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.wroclaw.pwr.Lab9-FoodPin";
