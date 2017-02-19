@@ -25,12 +25,17 @@
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vgb-cu-61s">
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztK-XJ-ISA">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztK-XJ-ISA">
                                                     <color key="backgroundColor" red="1" green="0.80873946929999996" blue="0.48386762100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="dDa-wT-cED"/>
                                                         <constraint firstAttribute="height" constant="60" id="xqI-lu-MBj"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="D17-Ft-hFC">
                                                     <subviews>
@@ -61,6 +66,12 @@
                                         <constraint firstItem="Vgb-cu-61s" firstAttribute="top" secondItem="6gc-ng-AM6" secondAttribute="topMargin" constant="2" id="z51-2A-Def"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="BPe-Uo-QTM" id="EHi-CT-Knz"/>
+                                    <outlet property="nameLabel" destination="GbX-nI-7Cb" id="Jb2-a9-dGI"/>
+                                    <outlet property="thumbnailImageView" destination="ztK-XJ-ISA" id="O8F-7q-1dz"/>
+                                    <outlet property="typeLabel" destination="lmH-35-wjf" id="56z-44-Gbp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

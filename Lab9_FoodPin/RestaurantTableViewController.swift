@@ -21,7 +21,18 @@ class RestaurantTableViewController: UITableViewController {
                             "upstate.jpg", "traif.jpg", "grahamavenuemeats.jpg", "wafflewolf.jpg",
                             "fiveleaves.jpg", "cafelore.jpg", "confessional.jpg", "barrafina.jpg",
                             "donostia.jpg", "royaloak.jpg", "caskpubkitchen.jpg"]
-           override func viewDidLoad() {
+    
+    var restaurantLocations = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong",
+                               "Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "Sydney",
+                               "New York", "New York", "New York", "New York", "New York", "New York", "New York",
+                               "London", "London", "London", "London"]
+    
+    var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink",
+         "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American",
+        "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea",
+        "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -53,15 +64,17 @@ class RestaurantTableViewController: UITableViewController {
         let cellIdentifier="Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
         
-        //cell.nameLabel.text=restaurantNames[indexPath.row]
-        //cell.thumbnailImageView.image=UIImage(named:restaurantImages[indexPath.row])
+
+        cell.nameLabel.text=restaurantNames[indexPath.row]
+        cell.locationLabel?.text=restaurantLocations[indexPath.row]
+        cell.typeLabel?.text=restaurantTypes[indexPath.row]
+        cell.thumbnailImageView?.image=UIImage(named:restaurantImages[indexPath.row])
+        // generowanie obrazków na tle koła 
+        //     dostępne też background, border, shedow, opacity
+        cell.thumbnailImageView.layer.cornerRadius=30.0
+        cell.thumbnailImageView.clipsToBounds=true
        
         
-        //cell.textLabel?.text=restaurantNames[indexPath.row]
-        //cell.imageView?.image=UIImage(named:restaurantImages[indexPath.row])
-
-        // Configure the cell...
-
         return cell
     }
  
