@@ -61,6 +61,7 @@ class RestaurantTableViewController: UITableViewController {
 
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cellIdentifier="Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
         
@@ -69,8 +70,10 @@ class RestaurantTableViewController: UITableViewController {
         cell.locationLabel?.text=restaurantLocations[indexPath.row]
         cell.typeLabel?.text=restaurantTypes[indexPath.row]
         cell.thumbnailImageView?.image=UIImage(named:restaurantImages[indexPath.row])
-        // generowanie obrazków na tle koła 
-        //     dostępne też background, border, shedow, opacity
+        
+        // generowanie obrazków na tle koła - clipToBoundRadius 
+        //    S   dostępne też background, border, shedow, opacity
+        
         cell.thumbnailImageView.layer.cornerRadius=30.0
         cell.thumbnailImageView.clipsToBounds=true
        
