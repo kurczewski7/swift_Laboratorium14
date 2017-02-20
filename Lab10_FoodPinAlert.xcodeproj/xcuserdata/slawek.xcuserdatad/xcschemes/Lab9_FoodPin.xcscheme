@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C0197FA1E58E5380005DF41"
-               BuildableName = "Lab9_FoodPin.app"
-               BlueprintName = "Lab9_FoodPin"
-               ReferencedContainer = "container:Lab9_FoodPin.xcodeproj">
+               BuildableName = "Lab10_FoodPinAlert.app"
+               BlueprintName = "Lab10_FoodPinAlert"
+               ReferencedContainer = "container:Lab10_FoodPinAlert.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C0197FA1E58E5380005DF41"
-            BuildableName = "Lab9_FoodPin.app"
-            BlueprintName = "Lab9_FoodPin"
-            ReferencedContainer = "container:Lab9_FoodPin.xcodeproj">
+            BuildableName = "Lab10_FoodPinAlert.app"
+            BlueprintName = "Lab10_FoodPinAlert"
+            ReferencedContainer = "container:Lab10_FoodPinAlert.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C0197FA1E58E5380005DF41"
-            BuildableName = "Lab9_FoodPin.app"
-            BlueprintName = "Lab9_FoodPin"
-            ReferencedContainer = "container:Lab9_FoodPin.xcodeproj">
+            BuildableName = "Lab10_FoodPinAlert.app"
+            BlueprintName = "Lab10_FoodPinAlert"
+            ReferencedContainer = "container:Lab10_FoodPinAlert.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C0197FA1E58E5380005DF41"
-            BuildableName = "Lab9_FoodPin.app"
-            BlueprintName = "Lab9_FoodPin"
-            ReferencedContainer = "container:Lab9_FoodPin.xcodeproj">
+            BuildableName = "Lab10_FoodPinAlert.app"
+            BlueprintName = "Lab10_FoodPinAlert"
+            ReferencedContainer = "container:Lab10_FoodPinAlert.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

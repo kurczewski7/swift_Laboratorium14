@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C0197FB1E58E5380005DF41 /* Lab9_FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab9_FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0197FB1E58E5380005DF41 /* Lab10_FoodPinAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab10_FoodPinAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0197FE1E58E5380005DF41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C0198031E58E5380005DF41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C0198051E58E5380005DF41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		2C0197F21E58E5380005DF41 = {
 			isa = PBXGroup;
 			children = (
-				2C0197FD1E58E5380005DF41 /* Lab9_FoodPin */,
+				2C0197FD1E58E5380005DF41 /* Lab10_FoodPinAlert */,
 				2C0197FC1E58E5380005DF41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		2C0197FC1E58E5380005DF41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C0197FB1E58E5380005DF41 /* Lab9_FoodPin.app */,
+				2C0197FB1E58E5380005DF41 /* Lab10_FoodPinAlert.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C0197FD1E58E5380005DF41 /* Lab9_FoodPin */ = {
+		2C0197FD1E58E5380005DF41 /* Lab10_FoodPinAlert */ = {
 			isa = PBXGroup;
 			children = (
 				2C0197FE1E58E5380005DF41 /* AppDelegate.swift */,
@@ -64,15 +64,16 @@
 				2C0198071E58E5380005DF41 /* LaunchScreen.storyboard */,
 				2C01980A1E58E5380005DF41 /* Info.plist */,
 			);
+			name = Lab10_FoodPinAlert;
 			path = Lab9_FoodPin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C0197FA1E58E5380005DF41 /* Lab9_FoodPin */ = {
+		2C0197FA1E58E5380005DF41 /* Lab10_FoodPinAlert */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C01980D1E58E5380005DF41 /* Build configuration list for PBXNativeTarget "Lab9_FoodPin" */;
+			buildConfigurationList = 2C01980D1E58E5380005DF41 /* Build configuration list for PBXNativeTarget "Lab10_FoodPinAlert" */;
 			buildPhases = (
 				2C0197F71E58E5380005DF41 /* Sources */,
 				2C0197F81E58E5380005DF41 /* Frameworks */,
@@ -82,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = Lab9_FoodPin;
+			name = Lab10_FoodPinAlert;
 			productName = Lab9_FoodPin;
-			productReference = 2C0197FB1E58E5380005DF41 /* Lab9_FoodPin.app */;
+			productReference = 2C0197FB1E58E5380005DF41 /* Lab10_FoodPinAlert.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,11 +100,12 @@
 				TargetAttributes = {
 					2C0197FA1E58E5380005DF41 = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 667E7NU7M9;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 2C0197F61E58E5380005DF41 /* Build configuration list for PBXProject "Lab9_FoodPin" */;
+			buildConfigurationList = 2C0197F61E58E5380005DF41 /* Build configuration list for PBXProject "Lab10_FoodPinAlert" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -116,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C0197FA1E58E5380005DF41 /* Lab9_FoodPin */,
+				2C0197FA1E58E5380005DF41 /* Lab10_FoodPinAlert */,
 			);
 		};
 /* End PBXProject section */
@@ -262,10 +264,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 667E7NU7M9;
 				INFOPLIST_FILE = Lab9_FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.wroclaw.pwr.Lab9-FoodPin";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.wroclaw.pwr.Lab10-FoodPinAlert";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -275,10 +278,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 667E7NU7M9;
 				INFOPLIST_FILE = Lab9_FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.wroclaw.pwr.Lab9-FoodPin";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.wroclaw.pwr.Lab10-FoodPinAlert";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -287,7 +291,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C0197F61E58E5380005DF41 /* Build configuration list for PBXProject "Lab9_FoodPin" */ = {
+		2C0197F61E58E5380005DF41 /* Build configuration list for PBXProject "Lab10_FoodPinAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C01980B1E58E5380005DF41 /* Debug */,
@@ -296,7 +300,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C01980D1E58E5380005DF41 /* Build configuration list for PBXNativeTarget "Lab9_FoodPin" */ = {
+		2C01980D1E58E5380005DF41 /* Build configuration list for PBXNativeTarget "Lab10_FoodPinAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C01980E1E58E5380005DF41 /* Debug */,

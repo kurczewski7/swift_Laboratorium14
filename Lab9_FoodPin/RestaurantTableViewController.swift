@@ -80,6 +80,33 @@ class RestaurantTableViewController: UITableViewController {
         
         return cell
     }
+    override    func    tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Tworzenie option menu jako action sheet - druga opcja alert
+        let optionMenu=UIAlertController(title: "Tytuł", message: "Co chcesz zrobić?", preferredStyle: .alert)
+        
+        
+        let callActionHandler={ (action:UIAlertAction!) -> Void in
+            let allertMessage = UIAlertController(title: "Usługa niedostępna",
+                                                  message: "Przepraszam telefon niedostępny. Spróbój później",
+                                                 
+                                                  preferredStyle: .alert)
+            allertMessage.addAction(UIAlertAction(title:"OK",style:.default,handler:nil))
+            self.present(allertMessage, animated: true, completion: nil)
+        }
+        
+        // Dodawanie akcji do menu
+        let  cancelAction=UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let  callAction = UIAlertAction(title: "Zadzwoń na "+"123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+        
+        
+            
+        
+        optionMenu.addAction(callAction)
+        optionMenu.addAction(cancelAction)
+        present(optionMenu, animated: true, completion: nil)
+        
+        
+    }
  
 
     /*
