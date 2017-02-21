@@ -138,22 +138,31 @@ class RestaurantTableViewController: UITableViewController {
         }
     }
     override    func    tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
         // Social - klawisz udostępniania
-        let shareAction=UITableViewRowAction(style: .default, title: "Udostępnij", handler:
-        { (action, indexPath) -> Void in
-            let defaultText="Właśnie sprawdzam w "+self.restaurantNames[indexPath.row]
-            let activityControler=UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
-            self.present(activityControler, animated: true, completion: nil)
+        let shareAction=UITableViewRowAction(style: .default, title: "Share",
+            handler:
+            { (action, indexPath) -> Void in
+                let defaultText="Właśnie sprawdzam w "+self.restaurantNames[indexPath.row]
             
-        })
+                if let imagageToShare=UIImage(named: self.restaurantImages[indexPath.row])
+                {
+                   let activityControler=UIActivityViewController(activityItems: [defaultText,imagageToShare], applicationActivities: nil)
+                   self.present(activityControler, animated: true, completion: nil)
+                }
+            })
         // Delete - klawisz kasowania
-        let deleteAction = UITableViewRowAction(style: .default, title: "Kasuj",handler:
+        let deleteAction = UITableViewRowAction(style: .default, title: "Kasuj",
+        handler:
         { (action,indexPath)  -> Void in
+            // kasowanie wierszy z tablic źródłowych - modelu
             self.restaurantNames.remove(at: indexPath.row)
             self.restaurantLocations.remove(at: indexPath.row)
             self.restaurantTypes.remove(at: indexPath.row)
             self.restaurantImages.remove(at: indexPath.row)
             self.restaurantIsVisited.remove(at: indexPath.row)
+       
+            //  kasowanie z widoku
             self.tableView.deleteRows(at: [indexPath], with: .fade)
                 })
         return  [deleteAction, shareAction]
