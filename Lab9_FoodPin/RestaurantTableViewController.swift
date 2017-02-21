@@ -32,6 +32,8 @@ class RestaurantTableViewController: UITableViewController {
         "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea",
         "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
+    var restaurantIsVisited=Array(repeating: false, count: 21)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -76,38 +78,47 @@ class RestaurantTableViewController: UITableViewController {
         
         cell.thumbnailImageView.layer.cornerRadius=30.0
         cell.thumbnailImageView.clipsToBounds=true
+        cell.accessoryType=restaurantIsVisited[indexPath.row] ? .checkmark : .none
        
         
         return cell
     }
     override    func    tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Tworzenie option menu jako action sheet - druga opcja alert
-        let optionMenu=UIAlertController(title: "Tytuł", message: "Co chcesz zrobić?", preferredStyle: .alert)
+        let optionMenu=UIAlertController(title: "Tytuł", message: "Co chcesz zrobić?", preferredStyle: .actionSheet)
         
-        
+        // Dodawanie Call action
         let callActionHandler={ (action:UIAlertAction!) -> Void in
             let allertMessage = UIAlertController(title: "Usługa niedostępna",
                                                   message: "Przepraszam telefon niedostępny. Spróbój później",
-                                                 
                                                   preferredStyle: .alert)
+            
             allertMessage.addAction(UIAlertAction(title:"OK",style:.default,handler:nil))
             self.present(allertMessage, animated: true, completion: nil)
         }
+        let tytul=restaurantIsVisited[indexPath.row] ? "Odznacz" : "Zaznaczswift"
+        let checkInAction=UIAlertAction(title: tytul, style: .default, handler:
+        {
+            (action:UIAlertAction!) -> Void in
+            let cell=tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none : .checkmark
+            self.restaurantIsVisited[indexPath.row] = !(self.restaurantIsVisited[indexPath.row])
+        })
         
         // Dodawanie akcji do menu
         let  cancelAction=UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let  callAction = UIAlertAction(title: "Zadzwoń na "+"123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
         
-        
-            
-        
+        optionMenu.addAction(checkInAction)
         optionMenu.addAction(callAction)
         optionMenu.addAction(cancelAction)
         present(optionMenu, animated: true, completion: nil)
         
         
     }
- 
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 
     /*
     // Override to support conditional editing of the table view.
