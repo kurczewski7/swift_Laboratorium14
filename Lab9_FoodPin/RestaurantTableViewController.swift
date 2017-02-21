@@ -127,13 +127,38 @@ class RestaurantTableViewController: UITableViewController {
             restaurantTypes.remove(at: indexPath.row)
             restaurantImages.remove(at: indexPath.row)
             restaurantIsVisited.remove(at: indexPath.row)
-            print("Ilość elementów tablicy: \(restaurantNames.count)")
-            for name in restaurantNames {
-                print(name)
-            }
             
+            // tableView.reloadData()  przeładowuje całą tablicę lepiej użyć deleteRows
+            tableView.deleteRows(at: [indexPath], with: .fade) // dostępne .fade .right .left .top
+        }
+        print("Ilość elementów tablicy: \(restaurantNames.count)")
+        for name in restaurantNames {
+            print("Restauracja:"+name)
         }
     }
+    override    func    tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        // Social - klawisz udostępniania
+        let shareAction=UITableViewRowAction(style: .default, title: "Udostępnij", handler:
+        { (action, indexPath) -> Void in
+            let defaultText="Właśnie sprawdzam w "+self.restaurantNames[indexPath.row]
+            let activityControler=UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+            self.present(activityControler, animated: true, completion: nil)
+            
+        })
+        // Delete - klawisz kasowania
+        let deleteAction = UITableViewRowAction(style: .default, title: "Kasuj",handler:
+        { (action,indexPath)  -> Void in
+            self.restaurantNames.remove(at: indexPath.row)
+            self.restaurantLocations.remove(at: indexPath.row)
+            self.restaurantTypes.remove(at: indexPath.row)
+            self.restaurantImages.remove(at: indexPath.row)
+            self.restaurantIsVisited.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+                })
+        return  [deleteAction, shareAction]
+        }
+        
+
 
     /*
     // Override to support conditional editing of the table view.
