@@ -151,6 +151,7 @@ class RestaurantTableViewController: UITableViewController {
                    self.present(activityControler, animated: true, completion: nil)
                 }
             })
+        shareAction.backgroundColor=UIColor(red:0/255, green: 177/255, blue:106/255, alpha:1.0) // 48 173 99
         // Delete - klawisz kasowania
         let deleteAction = UITableViewRowAction(style: .default, title: "Kasuj",
         handler:
@@ -165,6 +166,7 @@ class RestaurantTableViewController: UITableViewController {
             //  kasowanie z widoku
             self.tableView.deleteRows(at: [indexPath], with: .fade)
                 })
+        deleteAction.backgroundColor=UIColor.red
         return  [deleteAction, shareAction]
         }
         
