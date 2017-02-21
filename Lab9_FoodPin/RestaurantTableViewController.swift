@@ -119,6 +119,21 @@ class RestaurantTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
     }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete)
+        {
+            restaurantNames.remove(at: indexPath.row)
+            restaurantLocations.remove(at: indexPath.row)
+            restaurantTypes.remove(at: indexPath.row)
+            restaurantImages.remove(at: indexPath.row)
+            restaurantIsVisited.remove(at: indexPath.row)
+            print("Ilość elementów tablicy: \(restaurantNames.count)")
+            for name in restaurantNames {
+                print(name)
+            }
+            
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
