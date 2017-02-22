@@ -174,10 +174,14 @@ class RestaurantTableViewController: UITableViewController {
     // Przekazywanie obrazka z ViewControlera master do detail dla segue 'showRestaurantDetail'
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier=="showRestaurantDetail" {
-            if let IndexPath=tableView.indexPathForSelectedRow
+            if let indexPath=tableView.indexPathForSelectedRow
             {
                 let destinationControler=segue.destination as! RestaurantDetailViewController
-                destinationControler.restaurantImage=restaurantImages[IndexPath.row]
+                destinationControler.sendImage=restaurantImages[indexPath.row]
+                
+                destinationControler.sendName=restaurantNames[indexPath.row]
+                destinationControler.sendLocation=restaurantLocations[indexPath.row]
+                destinationControler.sendType=restaurantTypes[indexPath.row]
             }
         
         }

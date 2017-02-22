@@ -99,17 +99,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KbS-bN-BzM"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="94E-FG-yhr">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnv-RQ-s1N">
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.63548937179999998" green="0.63548937179999998" blue="0.63548937179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlh-0a-BGf">
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.63548937179999998" green="0.63548937179999998" blue="0.63548937179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-lQ-QUL">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qlh-0a-BGf" firstAttribute="leading" secondItem="94E-FG-yhr" secondAttribute="leading" constant="15" id="0Fz-VF-qlR"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qlh-0a-BGf" secondAttribute="bottom" constant="20" symbolic="YES" id="mFc-OW-8ad"/>
+                                    <constraint firstItem="ya8-lQ-QUL" firstAttribute="leading" secondItem="94E-FG-yhr" secondAttribute="leading" id="zFw-wo-BHt"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="94E-FG-yhr" firstAttribute="top" secondItem="IQU-au-WJ9" secondAttribute="bottom" constant="230" id="1fy-a1-73h"/>
                             <constraint firstAttribute="trailing" secondItem="KbS-bN-BzM" secondAttribute="trailing" id="F2v-j6-XaL"/>
                             <constraint firstItem="KbS-bN-BzM" firstAttribute="leading" secondItem="h8O-Tj-wG8" secondAttribute="leading" id="Gyf-1B-eEz"/>
+                            <constraint firstItem="94E-FG-yhr" firstAttribute="centerX" secondItem="KbS-bN-BzM" secondAttribute="centerX" id="aH2-GJ-9FT"/>
                             <constraint firstItem="eCB-Y4-2t9" firstAttribute="top" secondItem="KbS-bN-BzM" secondAttribute="bottom" id="d94-Iw-V36"/>
+                            <constraint firstItem="94E-FG-yhr" firstAttribute="centerY" secondItem="KbS-bN-BzM" secondAttribute="centerY" id="ecz-t3-SDg"/>
                             <constraint firstItem="KbS-bN-BzM" firstAttribute="top" secondItem="h8O-Tj-wG8" secondAttribute="top" id="rwz-Ak-cWG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="restaurantImageView" destination="KbS-bN-BzM" id="2b6-Bo-zFl"/>
+                        <outlet property="restaurantLocation" destination="ya8-lQ-QUL" id="fQh-xh-5iK"/>
+                        <outlet property="restaurantName" destination="dnv-RQ-s1N" id="d4t-XC-hWd"/>
+                        <outlet property="restaurantType" destination="Qlh-0a-BGf" id="uhD-VX-XTz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6v9-Rq-Dre" userLabel="First Responder" sceneMemberID="firstResponder"/>
