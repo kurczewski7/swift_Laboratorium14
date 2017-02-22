@@ -25,10 +25,10 @@ class RestaurantDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         restaurantImageView.image=UIImage(named: sendImage)
-        restaurantName.text=sendName
-        restaurantLocation.text=sendLocation
-        restaurantType.text=sendType
-        
+//        restaurantName.text=sendName
+//        restaurantLocation.text=sendLocation
+//        restaurantType.text=sendType
+//        
     }
 
     override func didReceiveMemoryWarning() {
