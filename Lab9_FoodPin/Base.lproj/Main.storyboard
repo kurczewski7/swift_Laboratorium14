@@ -71,7 +71,7 @@
                                     <outlet property="nameLabel" destination="GbX-nI-7Cb" id="Jb2-a9-dGI"/>
                                     <outlet property="thumbnailImageView" destination="ztK-XJ-ISA" id="O8F-7q-1dz"/>
                                     <outlet property="typeLabel" destination="lmH-35-wjf" id="56z-44-Gbp"/>
-                                    <segue destination="SYc-vw-Cds" kind="show" id="BZ7-Vn-IhJ"/>
+                                    <segue destination="SYc-vw-Cds" kind="show" identifier="showRestaurantDetail" id="BZ7-Vn-IhJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="906" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant Detail View Controller-->
         <scene sceneID="yWP-YM-n2e">
             <objects>
-                <viewController id="SYc-vw-Cds" sceneMemberID="viewController">
+                <viewController id="SYc-vw-Cds" customClass="RestaurantDetailViewController" customModule="Lab10_FoodPinAlert" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IQU-au-WJ9"/>
                         <viewControllerLayoutGuide type="bottom" id="eCB-Y4-2t9"/>
@@ -108,6 +108,9 @@
                             <constraint firstItem="KbS-bN-BzM" firstAttribute="top" secondItem="h8O-Tj-wG8" secondAttribute="top" id="rwz-Ak-cWG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="KbS-bN-BzM" id="2b6-Bo-zFl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6v9-Rq-Dre" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
