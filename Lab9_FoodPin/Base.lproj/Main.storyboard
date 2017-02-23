@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -106,13 +107,44 @@
                                     <color key="backgroundColor" red="1" green="0.80873946929999996" blue="0.48386762100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </imageView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="36" id="0uH-lK-wPt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="36" id="0uH-lK-wPt" customClass="RestaurantDetailTableViewCell" customModule="Lab10_FoodPinAlert" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="392" width="375" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0uH-lK-wPt" id="huh-Ns-f11">
-                                            <frame key="frameInset" width="375" height="35.5"/>
+                                            <frame key="frameInset" width="375" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ou3-Sk-hLO">
+                                                    <frame key="frameInset" minX="34" minY="8" width="333" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="261" verticalHuggingPriority="251" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0O-2L-8kY">
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sN-6H-hzL">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="1sN-6H-hzL" firstAttribute="width" secondItem="t0O-2L-8kY" secondAttribute="width" multiplier="0.5" id="Lw0-Oc-IEz"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="t0O-2L-8kY" firstAttribute="leading" secondItem="huh-Ns-f11" secondAttribute="leadingMargin" constant="26" id="43a-On-6yl"/>
+                                                <constraint firstItem="1sN-6H-hzL" firstAttribute="centerY" secondItem="huh-Ns-f11" secondAttribute="centerY" id="D6d-pL-nhu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1sN-6H-hzL" secondAttribute="trailing" id="UuL-nE-FRT"/>
+                                                <constraint firstItem="t0O-2L-8kY" firstAttribute="centerY" secondItem="huh-Ns-f11" secondAttribute="centerY" id="eIe-lz-dgl"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fieldLabel" destination="t0O-2L-8kY" id="EVW-q5-rX8"/>
+                                            <outlet property="valueLabel" destination="1sN-6H-hzL" id="NtN-2l-ygU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
