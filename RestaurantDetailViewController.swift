@@ -16,9 +16,9 @@ class RestaurantDetailViewController: UIViewController {
     var sendType = ""
     
     @IBOutlet var restaurantImageView:UIImageView!    
-    @IBOutlet weak var restaurantName: UILabel!
-    @IBOutlet weak var restaurantLocation: UILabel!
-    @IBOutlet weak var restaurantType: UILabel!
+//    @IBOutlet weak var restaurantName: UILabel!
+//    @IBOutlet weak var restaurantLocation: UILabel!
+//    @IBOutlet weak var restaurantType: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
