@@ -182,6 +182,7 @@ class RestaurantTableViewController: UITableViewController {
                 destinationControler.sendName=restaurantNames[indexPath.row]
                 destinationControler.sendLocation=restaurantLocations[indexPath.row]
                 destinationControler.sendType=restaurantTypes[indexPath.row]
+                destinationControler.sendVisited=restaurantIsVisited[indexPath.row]
             }
         
         }

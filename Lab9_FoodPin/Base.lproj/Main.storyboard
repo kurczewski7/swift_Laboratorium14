@@ -130,7 +130,7 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="1sN-6H-hzL" firstAttribute="width" secondItem="t0O-2L-8kY" secondAttribute="width" multiplier="0.5" id="Lw0-Oc-IEz"/>
+                                                        <constraint firstItem="1sN-6H-hzL" firstAttribute="width" secondItem="t0O-2L-8kY" secondAttribute="width" multiplier="2" id="Lw0-Oc-IEz"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>

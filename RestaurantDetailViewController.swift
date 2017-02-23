@@ -14,6 +14,7 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
     var sendName = ""
     var sendLocation = ""
     var sendType = ""
+    var sendVisited = false
     
     @IBOutlet var restaurantImageView:UIImageView!    
 //    @IBOutlet weak var restaurantName: UILabel!
@@ -50,11 +51,11 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
             cell.fieldLabel.text="Typ:"
             cell.valueLabel.text=sendType
         case 2:
-            cell.fieldLabel.text="Lokalizacja:"
+            cell.fieldLabel.text="Miejsce:"
             cell.valueLabel.text=sendLocation
         case 3:
             cell.fieldLabel.text="Znana:"
-            cell.valueLabel.text=sendType
+            cell.valueLabel.text = (sendVisited ? "Byłem tam" : "Nie" )
             
         default:
             cell.fieldLabel.text=""
