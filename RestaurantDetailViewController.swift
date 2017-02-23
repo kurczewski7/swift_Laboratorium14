@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RestaurantDetailViewController: UIViewController {
+class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     var sendImage = ""
     var sendName = ""
@@ -36,6 +36,14 @@ class RestaurantDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell=tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RestaurantDetailTableViewCell
+        return cell
+    }
 
     /*
     // MARK: - Navigation
