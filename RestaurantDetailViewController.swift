@@ -42,7 +42,25 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RestaurantDetailTableViewCell
-        return cell
+        switch indexPath.row {
+        case 0:
+            cell.fieldLabel.text="Nazwa:"
+            cell.valueLabel.text=sendName
+        case 1:
+            cell.fieldLabel.text="Typ:"
+            cell.valueLabel.text=sendType
+        case 2:
+            cell.fieldLabel.text="Lokalizacja:"
+            cell.valueLabel.text=sendLocation
+        case 3:
+            cell.fieldLabel.text="Znana:"
+            cell.valueLabel.text=sendType
+            
+        default:
+            cell.fieldLabel.text=""
+            cell.valueLabel.text=""
+        }
+      return cell
     }
 
     /*
