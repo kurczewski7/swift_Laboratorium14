@@ -16,20 +16,33 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
     var sendType = ""
     var sendVisited = false
     
-    @IBOutlet var restaurantImageView:UIImageView!    
-//    @IBOutlet weak var restaurantName: UILabel!
-//    @IBOutlet weak var restaurantLocation: UILabel!
-//    @IBOutlet weak var restaurantType: UILabel!
+    @IBOutlet var restaurantImageView:UIImageView!
+    @IBOutlet var tableView:UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         restaurantImageView.image=UIImage(named: sendImage)
-//        restaurantName.text=sendName
-//        restaurantLocation.text=sendLocation
-//        restaurantType.text=sendType
-//        
+        title=sendName
+        
+        // ustawienie koloru tableView
+        tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.9)
+        
+        // usuniecie ramki z tableView
+        tableView.tableFooterView=UIView(frame: CGRect.zero)
+        
+        // zmiana koloru separatora komórek
+        tableView.separatorColor=UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 0.8)
+    
+        
+        
+        
+        // nie ma funkcji apparance().barTintColor
+        //UINavigationBar.appearance().backgroundColor=UIColor(red: 216/255, green: 74/255, blue: 32/255, alpha: 1)
+
+        
+      //navigationItem.backBarButtonItem=UIBarButtonItem(title: "aaa", style: .plain, target: nil, action: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,6 +74,8 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
             cell.fieldLabel.text=""
             cell.valueLabel.text=""
         }
+        // ustawienie przezroczystości komórki
+        cell.backgroundColor=UIColor.clear
       return cell
     }
 

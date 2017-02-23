@@ -111,7 +111,7 @@
                                         <rect key="frame" x="0.0" y="392" width="375" height="6"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0uH-lK-wPt" id="huh-Ns-f11">
-                                            <frame key="frameInset" width="375" height="5"/>
+                                            <frame key="frameInset" width="375" height="6"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ou3-Sk-hLO">
@@ -165,6 +165,7 @@
                     </view>
                     <connections>
                         <outlet property="restaurantImageView" destination="cws-n4-ugd" id="J31-3A-C7I"/>
+                        <outlet property="tableView" destination="9rN-WX-DbY" id="kmt-Ok-UjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6v9-Rq-Dre" userLabel="First Responder" sceneMemberID="firstResponder"/>
