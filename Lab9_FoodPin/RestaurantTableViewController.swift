@@ -40,6 +40,14 @@ class RestaurantTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // ustawienie koloru Navigator Bar (Uwaga: barTintColor nie podpowiada - z dokumentacji w tej wersji nie działa)
+        //UINavigationBar.appearance().tintColor=UIColor(red: 216, green: 74, blue: 32, alpha: 1)
+//        UINavigationBar.appearance().barTintColor=UIColor(red: 216, green: 74, blue: 32, alpha: 1)
+//        if let barFont=UIFont(name: "Avenir-Light", size: 24.0){
+//            
+//            UINavigationBar.appearance().titleTextAttributes=[NSForegroundColorAttributeName:UIColor.brown,NSFontAttributeName:barFont]
+//            NSFontAttributeName:
+      
         
         
 
