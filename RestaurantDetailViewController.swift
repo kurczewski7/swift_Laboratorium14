@@ -14,7 +14,9 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
     var sendName = ""
     var sendLocation = ""
     var sendType = ""
+    var sendPhone = ""
     var sendVisited = false
+
     
     @IBOutlet var restaurantImageView:UIImageView!
     @IBOutlet var tableView:UITableView!
@@ -52,7 +54,7 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RestaurantDetailTableViewCell
@@ -69,6 +71,9 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         case 3:
             cell.fieldLabel.text="Znana:"
             cell.valueLabel.text = (sendVisited ? "Byłem tam" : "Nie" )
+        case 4:
+            cell.fieldLabel.text="Telefon:"
+            cell.valueLabel.text=sendPhone
             
         default:
             cell.fieldLabel.text=""

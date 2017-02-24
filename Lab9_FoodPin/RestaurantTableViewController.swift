@@ -31,11 +31,17 @@ class RestaurantTableViewController: UITableViewController {
          "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American",
         "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea",
         "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
-    
+    var restaurantPhoneNumbers = ["512-58-95-21","512-58-95-22","512-58-95-23","512-58-95-24","512-58-95-25","512-58-95-25",
+                                "512-58-95-27","512-58-95-28","512-58-95-29","512-58-95-30","512-58-95-31","512-58-95-32",
+                                "512-58-95-33","512-58-95-34","512-58-95-35","512-58-95-36","512-58-95-37","512-58-95-38",
+                                "512-58-95-39","512-58-95-40","512-58-95-41"]
+                                
     var restaurantIsVisited=Array(repeating: false, count: 21)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -130,6 +136,7 @@ class RestaurantTableViewController: UITableViewController {
             restaurantTypes.remove(at: indexPath.row)
             restaurantImages.remove(at: indexPath.row)
             restaurantIsVisited.remove(at: indexPath.row)
+            restaurantPhoneNumbers.remove(at: indexPath.row)
             
             // tableView.reloadData()  przeładowuje całą tablicę lepiej użyć deleteRows
             tableView.deleteRows(at: [indexPath], with: .fade) // dostępne .fade .right .left .top
@@ -164,6 +171,7 @@ class RestaurantTableViewController: UITableViewController {
             self.restaurantTypes.remove(at: indexPath.row)
             self.restaurantImages.remove(at: indexPath.row)
             self.restaurantIsVisited.remove(at: indexPath.row)
+            self.restaurantPhoneNumbers.remove(at: indexPath.row)
        
             //  kasowanie z widoku
             self.tableView.deleteRows(at: [indexPath], with: .fade)
@@ -183,6 +191,7 @@ class RestaurantTableViewController: UITableViewController {
                 destinationControler.sendLocation=restaurantLocations[indexPath.row]
                 destinationControler.sendType=restaurantTypes[indexPath.row]
                 destinationControler.sendVisited=restaurantIsVisited[indexPath.row]
+                destinationControler.sendPhone=restaurantPhoneNumbers[indexPath.row]
             }
         
         }
