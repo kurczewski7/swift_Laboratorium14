@@ -73,11 +73,11 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
             cell.fieldLabel.text="Miejsce:"
             cell.valueLabel.text=sendLocation
         case 3:
-            cell.fieldLabel.text="Znana:"
-            cell.valueLabel.text = (sendVisited ? "Byłem tam" : "Nie" )
-        case 4:
             cell.fieldLabel.text="Telefon:"
             cell.valueLabel.text=sendPhone
+        case 4:
+            cell.fieldLabel.text="Znana:"
+            cell.valueLabel.text = (sendVisited ? "Byłem tam" : "Nie" )
             
         default:
             cell.fieldLabel.text=""

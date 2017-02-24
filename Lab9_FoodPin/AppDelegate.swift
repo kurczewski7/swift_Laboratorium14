@@ -22,10 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         UINavigationBar.appearance().barTintColor=UIColor(red: 215/255, green: 74/255, blue: 32/255, alpha: 1.0)
         UINavigationBar.appearance().tintColor=UIColor.white
-        if let barFont=UIFont(name: "Avenir-Light", size: 24){
+        
+        if let barFont=UIFont(name: "AvenirNextCondensed-DemiBold", size: 24) {
             UINavigationBar.appearance().titleTextAttributes=[NSForegroundColorAttributeName:UIColor.white,NSFontAttributeName:barFont]
         }
-        return true
+               return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
