@@ -51,6 +51,10 @@ class RestaurantDetailViewController: UIViewController,UITableViewDataSource,UIT
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.hidesBarsOnSwipe=false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
