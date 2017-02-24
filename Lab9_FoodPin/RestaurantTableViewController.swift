@@ -37,9 +37,24 @@ class RestaurantTableViewController: UITableViewController {
                                 "512-58-95-39","512-58-95-40","512-58-95-41"]
                                 
     var restaurantIsVisited=Array(repeating: false, count: 21)
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        restaurantIsVisited[1]=true
+        restaurantIsVisited[2]=true
+        restaurantIsVisited[4]=true
+        restaurantIsVisited[6]=true
+        restaurantIsVisited[9]=true
+        restaurantIsVisited[11]=true
+        restaurantIsVisited[12]=true
+        restaurantIsVisited[15]=true
+        restaurantIsVisited[18]=true
+
+
+        
         
         // usunięcie napisu przy klawiszu cofania
         navigationItem.backBarButtonItem=UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
